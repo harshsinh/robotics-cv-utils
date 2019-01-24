@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>ros-utils</name>
+  <name>robotics-cv-utils</name>
   <version>0.0.0</version>
   <description>General Utilies for Robotics involving ROS</description>
 

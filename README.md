@@ -1,2 +1,2 @@
-# ros-utils
-General ROS utilities
+# robotics-cv-utils
+General Robotics and Computer Vision Utilies.
