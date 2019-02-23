@@ -12,7 +12,7 @@ int main (int argc, char** argv)
     cv_bridge::CvImage cv_image;
     sensor_msgs::Image ros_image;
 
-    std::string path = ros::package::getPath ("demo");
+    std::string path = ros::package::getPath ("robotics-cv-utils");
     path = path.append ("/utils/images/igvc.png");
     std::cout << "Image : " << path << std::endl;
 
@@ -21,7 +21,7 @@ int main (int argc, char** argv)
     cv_image.encoding = "bgr8";
     cv_image.toImageMsg (ros_image);
 
-    ros::Publisher pub = nh.advertise<sensor_msgs::Image>("image", 1);
+    ros::Publisher pub = nh.advertise<sensor_msgs::Image>("image_raw", 1);
     ros::Rate loop_rate (30);
 
     while (nh.ok())

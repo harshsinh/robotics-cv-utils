@@ -40,7 +40,7 @@ int main (int argc, char* argv [])
 //    cv::namedWindow ("gray");
 //    cv::startWindowThread ();
 
-    image_transport::Subscriber sub = it.subscribe ("image", 1000, msgCallback);
+    image_transport::Subscriber sub = it.subscribe ("image_raw", 1000, msgCallback);
     impub= it.advertise ("/mask", 10);
 
     while(ros::ok()) {
