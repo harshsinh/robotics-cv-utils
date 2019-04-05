@@ -33,6 +33,9 @@ int main (int argc, char ** argv)
     ros::Subscriber sub = nh.subscribe ("toggle", 1000, msgCallback);
 
     cap.open (camera);
+    cap.set(cv::CAP_PROP_FOURCC, cv::VideoWriter::fourcc('M','J','P','G'));
+    cap.set(cv::CAP_PROP_FRAME_WIDTH, 4096);
+    cap.set(cv::CAP_PROP_FRAME_HEIGHT, 2160);
 
     //cv::namedWindow ("here");
     //cv::startWindowThread ();
